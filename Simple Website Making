@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Product Showcase</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Styles */
+
+    :root {
+      --primary-color: #646fd4;
+      --body-font: 'Poppins', sans-serif;
+    }
+
+    body {
+      font-family: var(--body-font);
+      margin: 0;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary-color);
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+
+    /* Layout */
+
+    header,
+    nav,
+    main,
+    footer {
+      padding: 1rem;
+    }
+
+    /* Header */
+
+    header {
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+
+    /* Navigation */
+
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-left: 2rem;
+    }
+
+    nav a {
+      color: #777;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Main Content */
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Cards */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .card h3 {
+      margin-top: 0.5rem; 
+    }
+
+    /* Contact Page */
+
+    #contact {
+      display: none; 
+    }
+
+    /* Media Queries */
+
+    @media (max-width: 700px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <h1>Product Showcase By Chirag</h1>
+  </header>
+
+  <!-- Navigation -->
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#Sign">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+
+  <main>
+
+    <div id="products">
+
+      <h2>Featured Products</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0553014a-fb42-420a-a54b-a39de272ab6f/mercurial-superfly-9-academy-multi-ground-football-boot-HRT6gf.png">
+          <h3>Nike Superfly Spikes</h3>
+          <p>
+            Description for Nike superfly spikes----------> Instantly tilt the pitch in the bold design of the Superfly 9 Academy MG. It's loaded with a Zoom Air unit and flexible NikeSkin up top for exceptional touch, so you can dominate in the waning minutes of a match—when it matters most. Fast is in the Air.
+          </p>
+          <button>Add to Cart</button>
+          <button>Buy Now</button>
+
+        </div>
+
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/81pVgvSP-zL._UX625_.jpg">
+          <h3>Sparx Men Sneaker</h3>
+          <p>
+            Description for  Sparx Men Sneaker-------------> 
+            Sparx is all about passion, challenges and zeal of people who like to live on-the-edge, have a dare-devil spirit and do things differently. Checkout our exciting range of shoes, sandals & flip-flops.
+          </p>
+          <button>Add to Cart</button>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/71j6vtm6BvL._SX679_.jpg">
+          <h3>Anti Theft Laptop Bag </h3>
+          <p>
+            Black Colour Backpack for Men and Women for Stylish Office use as well as for Trendy College students. Huge compartment size that can fit upto a 15.6 inch Laptop with ease. Multiple pockets for other accessories.
+          </p>
+          <button>Add to Cart</button>
+          <button>Buy Now</button>
+        </div>
+        <!-- More cards -->
+
+      </div>
+
+    </div>
+
+    <div id="Sign">
+        <button>
+            Email Id =<input type="email">
+            Password =<input type="password"
+        </button>
+
+    </div>
+
+    <!-- Contact Page -->
+
+    <div id="contact">
+
+      <h2>Contact</h2>
+
+      <p>Call at Given Number = 7599859759</p>
+
+    </div>
+
+  </main>
+
+  <!-- JavaScript -->
+
+  <script>
+    // Show contact on click
+    document.querySelector('nav a[href="#contact"]').addEventListener('click', () => {
+      document.getElementById('contact').style.display = 'block';
+      document.getElementById('products').style.display = 'none';
+    });
+  </script>
+
+</body>
+
+</html>
